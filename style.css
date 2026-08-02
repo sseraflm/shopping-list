@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.product-card {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 12px;
+}
+#productList,
+#boughtProductList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bought {
+    border: 2px dashed black;
+}
