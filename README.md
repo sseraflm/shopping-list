@@ -20,7 +20,7 @@ It is a simple list that displays products on the website.
 
 It works by saving each product as an object and storing the object inside an array.
 
-Each product contains a name, quantity, category, and information about whether it has been bought.
+Each product contains a id, name, quantity, category, and information about whether it has been bought.
 
 The project uses functions to create product cards, render products, filter bought products, and update the counters.
 
@@ -36,8 +36,5 @@ JavaScript creates the product elements and adds them to the DOM.
 
 ## Plans for the future
 
-- Add products using a form.
-- Allow products to be marked as bought.
-- Add product deletion.
 - Add better input validation.
 - Save the shopping list between browser sessions.
