@@ -8,11 +8,19 @@
     </head>
     <body>
         <h1>Shopping list</h1>
+        <form id="inputs">
+            <label for="nameInput">Product Name:</label> <br />
+            <input type="text" id="nameInput" required /> <br />
+            <label for="quantityInput">Product quantity:</label> <br />
+            <input type="number" id="quantityInput" required min="1" /> <br />
+            <label for="categoryInput">Product category:</label> <br />
+            <input type="text" id="categoryInput" required /> <br />
+            <button id="createProduct">Submit</button>
+        </form>
         <p id="productCount"></p>
         <p id="boughtProductCount"></p>
+        <p id="noProducts" class="hidden">No products yet...</p>
         <div id="productList"></div>
-        <h2>Bought products list.</h2>
-        <div id="boughtProductList"></div>
         <script src="script.js"></script>
     </body>
 </html>
