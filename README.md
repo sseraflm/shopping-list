@@ -10,11 +10,19 @@ It is a simple list that displays products on the website.
 
 - Displaying all products.
 
-- Displaying bought products in a seperate section.
-
 - Showing the number of all products and bought products.
 
 - Visually distinguishing bought products.
+
+- Adding products via form.
+
+- Marking products as bought.
+
+- Removing products.
+
+- Showing an empty state when there are no products.
+
+- Basic input validation.
 
 ## How does it work?
 
