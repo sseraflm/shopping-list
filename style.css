@@ -22,3 +22,7 @@ body {
 .bought {
     border: 2px dashed black;
 }
+
+.hidden {
+    display: none;
+}
