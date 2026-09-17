@@ -1,9 +1,9 @@
-let productCount = document.getElementById("productCount");
-let boughtProductCount = document.getElementById("boughtProductCount");
-let productList = document.getElementById("productList");
-let createProductButton = document.getElementById("createProduct");
-let noProducts = document.getElementById("noProducts");
-let products = [
+const productCount = document.getElementById("productCount");
+const boughtProductCount = document.getElementById("boughtProductCount");
+const productList = document.getElementById("productList");
+const createProductButton = document.getElementById("createProduct");
+const noProducts = document.getElementById("noProducts");
+const products = [
     {
         id: 1,
         name: "Ado's CD",
@@ -35,22 +35,22 @@ let products = [
 ];
 
 function createProductItem(product) {
-    let productCard = document.createElement("div");
+    const productCard = document.createElement("div");
     productCard.className = "product-card";
     productCard.dataset.id = product.id;
 
-    let productName = document.createElement("h2");
+    const productName = document.createElement("h2");
     productName.innerText = `Name: ${product.name}`;
 
-    let productQuantity = document.createElement("p");
+    const productQuantity = document.createElement("p");
     productQuantity.innerText = `Quantity: ${product.quantity}`;
 
-    let productCategory = document.createElement("p");
+    const productCategory = document.createElement("p");
     productCategory.innerText = `Product category: ${product.category}`;
 
-    let productIsBought = document.createElement("p");
+    const productIsBought = document.createElement("p");
 
-    let boughtCheckbox = document.createElement("input");
+    const boughtCheckbox = document.createElement("input");
     boughtCheckbox.setAttribute("type", "checkbox");
     boughtCheckbox.classList.add("boughtCheck");
     boughtCheckbox.checked = product.isBought;
@@ -75,11 +75,11 @@ function createProductItem(product) {
         }
     });
 
-    let boughtCheckLabel = document.createElement("label");
+    const boughtCheckLabel = document.createElement("label");
     boughtCheckLabel.innerText = "Check to mark the product as bought.";
-    let br = document.createElement("br");
+    const br = document.createElement("br");
 
-    let deleteButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
     deleteButton.classList.add("removeObject");
     deleteButton.innerText = "Delete Object";
     deleteButton.addEventListener("click", deleteObject);
@@ -99,10 +99,10 @@ function createProductItem(product) {
 }
 function deleteObject(event) {
     event.preventDefault();
-    let closestProduct = event.target.closest(".product-card");
-    let productId = closestProduct.dataset.id;
-    let numberProductId = Number(productId);
-    let productIndex = products.findIndex(product => product.id === numberProductId);
+    const closestProduct = event.target.closest(".product-card");
+    const productId = closestProduct.dataset.id;
+    const numberProductId = Number(productId);
+    const productIndex = products.findIndex(product => product.id === numberProductId);
     products.splice(productIndex, 1);
     renderProducts(products, productList);
     updateAllProductCount(products, productCount);
@@ -116,24 +116,24 @@ function renderProducts(productsArray, container) {
     } else if (productsArray.length > 0) {
         noProducts.classList.add("hidden");
     }
-    for (let product of productsArray) {
-        let productCard = createProductItem(product);
+    for (const product of productsArray) {
+        const productCard = createProductItem(product);
         container.append(productCard);
     }
 }
 
 function getBoughtProducts(productsArray) {
-    let boughtProducts = productsArray.filter(product => product.isBought);
+    const boughtProducts = productsArray.filter(product => product.isBought);
     return boughtProducts;
 }
 
 function updateAllProductCount(productsArray, container) {
-    let allProductCounts = productsArray.length;
+    const allProductCounts = productsArray.length;
     container.innerText = `There are currently ${allProductCounts} products in the list.`;
 }
 
 function updateBoughtProductsCount(productsArray, container) {
-    let boughtProducts = getBoughtProducts(productsArray);
+    const boughtProducts = getBoughtProducts(productsArray);
 
     container.innerText = `There are currently ${boughtProducts.length} products bought.`;
 }
@@ -142,11 +142,11 @@ let objectId = 5;
 
 function createNewProducts(event) {
     event.preventDefault();
-    let nameInput = document.getElementById("nameInput");
-    let quantityInput = document.getElementById("quantityInput");
-    let categoryInput = document.getElementById("categoryInput");
+    const nameInput = document.getElementById("nameInput");
+    const quantityInput = document.getElementById("quantityInput");
+    const categoryInput = document.getElementById("categoryInput");
 
-    let newObject = {
+    const newObject = {
         id: objectId++,
         name: nameInput.value,
         quantity: quantityInput.value,
