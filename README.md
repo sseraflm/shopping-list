@@ -6,6 +6,8 @@ This is my third small project that uses JavaScript!
 
 It is a simple list that displays products on the website.
 
+Github pages link: https://sseraflm.github.io/shopping-list/
+
 ## Features
 
 - Displaying all products.
@@ -45,4 +47,7 @@ JavaScript creates the product elements and adds them to the DOM.
 ## Plans for the future
 
 - Add better input validation.
-- Save the shopping list between browser sessions.
+
+- Save the shopping list between browser sessions with localstorage.
+
+- Add better CSS.
