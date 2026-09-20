@@ -8,6 +8,9 @@ It is a simple list that displays products on the website.
 
 Github pages link: https://sseraflm.github.io/shopping-list/
 
+<img width="1911" height="1078" alt="shoppinglist" src="https://github.com/user-attachments/assets/6126a636-9852-4ea6-9b4c-9b8d1741a88a" />
+
+
 ## Features
 
 - Displaying all products.
