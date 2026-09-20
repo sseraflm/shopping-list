@@ -1,28 +1,61 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Inter, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  background-color: #090d16;
+  color: #f1f5f9;
+  text-align: center;
+}
+
+input {
+  border-radius: 10px;
+  text-align: center;
+  background-color: #223152;
+  border: 2px solid transparent;
+  color: #f1f5f9;
+  transition: 0.5s;
+}
+input:hover {
+  border: 2px solid #f1f5f9;
+}
+input:focus {
+  outline: none;
+}
+#createProduct {
+  display: block;
+  margin: 15px auto 0;
+  width: 175px;
+  border-radius: 10px;
+  background-color: #223152;
+  border: 2px solid transparent;
+  color: #f1f5f9;
+  transition: 0.5s;
+}
+#createProduct:hover {
+  border: 2px solid #f1f5f9;
 }
 
 .product-card {
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 12px;
+  border: 2px solid #223152;
+  padding: 15px;
+  border-radius: 12px;
+  background-color: #131b2e;
+  text-align: center;
 }
 #productList,
 #boughtProductList {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .bought {
-    border: 2px dashed black;
+  border: 2px dashed #2563eb;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
